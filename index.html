@@ -4,14 +4,20 @@
   <title>PURE INTERNET</title>
   <style>
     html, body, iframe {
-      height: 100%; width: 100%; margin: 0; border: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      border: 0;
     }
   </style>
 </head>
 <body>
   <iframe id="f"></iframe>
   <script>
-    f.src = location.hash ? `data:text/html;base64,${location.hash.slice(1)}` : "";
+    const iframe = document.getElementById('f');
+    iframe.src = location.hash 
+      ? `data:text/html;base64,${location.hash.slice(1)}` 
+      : "data:text/html;base64,PHA+UFVSRSBJTlRFUk5FVDwvcD4=";
   </script>
 </body>
 </html>
